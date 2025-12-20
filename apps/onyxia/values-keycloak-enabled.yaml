@@ -1,7 +1,7 @@
 onyxia:
   ingress:
     enabled: true
-    #ingressClassName: nginx
+    ingressClassName: nginx
     hosts:
       - host: datalab.databrin.com
   web:

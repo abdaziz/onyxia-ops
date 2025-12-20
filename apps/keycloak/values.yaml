@@ -3,16 +3,16 @@ global:
     allowInsecureImages: true
   postgresql:
     auth:
-      postgresPassword: "$CHANGEME1"
+      postgresPassword: "wMDIxMzc0ZjZjY"
       username: "keycloak"
-      password: "$CHANGEME2"
+      password: "wMDIxMzc0ZjZjY"
       database: "keycloak"
 keycloak:
   image:
     repository: bitnamilegacy/keycloak
   auth:
     adminUser: keycloak
-    adminPassword: $CHANGEME3
+    adminPassword: "wMDIxMzc0ZjZjY"
   postgresql:
     image:
       repository: bitnamilegacy/postgresql
@@ -45,7 +45,7 @@ keycloak:
   ingress:
     # If `true`, an Ingress is created
     enabled: true
-    #ingressClassName: nginx
+    ingressClassName: nginx
     # Ingress annotations
     annotations:
       ## Resolve HTTP 502 error using ingress-nginx:
@@ -85,5 +85,5 @@ keycloak:
     host: keycloakv3-postgresql
     port: 5432
     user: keycloak
-    password: $CHANGEME2
+    password: wMDIxMzc0ZjZjY
     database: keycloak

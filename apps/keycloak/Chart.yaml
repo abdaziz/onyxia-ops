@@ -3,5 +3,6 @@ name: keycloak
 version: 1.0.0
 dependencies:
   - name: keycloak
-    version: 24.9.0
-    repository: oci://registry-1.docker.io/bitnamicharts
+    version: 26.4.7
+    # repository: oci://registry-1.docker.io/bitnamicharts
+    repository: oci://registry-1.docker.io/cloudpirates/keycloak

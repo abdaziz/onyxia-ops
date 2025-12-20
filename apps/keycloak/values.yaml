@@ -52,17 +52,17 @@ keycloak:
       ## See https://www.ibm.com/support/pages/502-error-ingress-keycloak-response
       nginx.ingress.kubernetes.io/proxy-buffer-size: 128k
     # List of rules for the Ingress
-    hostname: "auth.lab.$DOMAIN"
+    hostname: "auth.lab.databrin.com"
     # TLS configuration
     extraTls:
       - hosts:
-         - auth.lab.$DOMAIN
+         - auth.lab.databrin.com
   
   extraStartupArgs: "--features=preview --log-level=org.keycloak.events:debug"
 
   extraEnvVars: 
     - name: ONYXIA_RESOURCES_ALLOWED_ORIGINS
-      value: "https://datalab.$DOMAIN, http://localhost, http://127.0.0.1"
+      value: "https://datalab.databrin.com, http://localhost, http://127.0.0.1"
 
   initContainers:
     - name: realm-ext-provider

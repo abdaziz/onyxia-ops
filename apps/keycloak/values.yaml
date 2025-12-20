@@ -1,21 +1,14 @@
 global:
-  security:
-    allowInsecureImages: true
   postgresql:
     auth:
-      postgresPassword: "wMDIxMzc0ZjZjY"
+      postgresPassword: "wMDIxMzc0EZS029er"
       username: "keycloak"
       password: "wMDIxMzc0ZjZjY"
       database: "keycloak"
 keycloak:
-  image:
-    repository: bitnamilegacy/keycloak
   auth:
     adminUser: keycloak
-    adminPassword: wMDIxMzc0ZjZjY
-  postgresql:
-    image:
-      repository: bitnamilegacy/postgresql
+    adminPassword: "TC1jmajQFfqi2VPMl0ex"
   production: true
   tls: 
     enabled: false 
@@ -64,7 +57,7 @@ keycloak:
     - name: ONYXIA_RESOURCES_ALLOWED_ORIGINS
       value: "https://datalab.databrin.com, http://localhost, http://127.0.0.1"
 
-  initContainers:
+  initContainers: |
     - name: realm-ext-provider
       image: curlimages/curl
       imagePullPolicy: IfNotPresent
@@ -73,17 +66,23 @@ keycloak:
       args:
         - -c
         - |
-          # The Onyxia Keycloak theme is published alongside the Onyxia releases as a artifacts: https://github.com/InseeFrLab/onyxia/releases
-
-          curl -L -f -S -o /extensions/theme-onyxia-web.jar https://github.com/InseeFrLab/onyxia/releases/download/v10.30.13/keycloak-theme.jar
+          curl -L -f -S -o /extensions/onyxia-web.jar https://github.com/InseeFrLab/onyxia/releases/download/v8.4.5/keycloak-theme.jar
       volumeMounts:
-        - name: empty-dir
+        - name: extensions
           mountPath: /extensions
-          subPath: app-providers-dir
+
+  extraVolumeMounts: |
+    - name: extensions
+      mountPath: /opt/bitnami/keycloak/providers
+
+  extraVolumes: |
+    - name: extensions
+      emptyDir: {}
 
   externalDatabase:
     host: keycloakv3-postgresql
     port: 5432
     user: keycloak
-    password: wMDIxMzc0ZjZjY
+    password: "wMDIxMzc0ZjZjY"
     database: keycloak
+

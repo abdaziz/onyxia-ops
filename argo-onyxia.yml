@@ -5,7 +5,7 @@ metadata:
   name: onyxia
   namespace: argocd
 spec:
-  project: onyxia
+  project: default
   source:
     repoURL: https://github.com/abdaziz/onyxia-ops.git
     targetRevision: HEAD

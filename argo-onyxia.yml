@@ -1,0 +1,21 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: onyxia
+  namespace: argocd
+spec:
+  project: onyxia
+  source:
+    repoURL: https://github.com/abdaziz/onyxia-ops.git
+    targetRevision: HEAD
+    path: apps/onyxia
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: onyxia
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true

@@ -11,8 +11,8 @@ keycloak:
   image:
     repository: bitnamilegacy/keycloak
   auth:
-    adminUser: "keycloak"
-    adminPassword: "wMDIxMzc0ZjZjY"
+    adminUser: keycloak
+    adminPassword: wMDIxMzc0ZjZjY
   postgresql:
     image:
       repository: bitnamilegacy/postgresql

@@ -47,7 +47,7 @@ keycloak:
   ingress:
     # If `true`, an Ingress is created
     enabled: true
-    #ingressClassName: nginx
+    ingressClassName: nginx
     # Ingress annotations
     annotations:
       ## Resolve HTTP 502 error using ingress-nginx:

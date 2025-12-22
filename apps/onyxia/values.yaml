@@ -35,7 +35,7 @@ onyxia:
     env:
       #security.cors.allowed_origins: "*"
       authentication.mode: "openidconnect"
-      oidc.issuer-uri: "https://aut.lab.databrin.com/auth/realms/datalab"
+      oidc.issuer-uri: "https://auth.lab.databrin.com/auth/realms/datalab"
       oidc.clientID: "onyxia"
       #oidc.audience: "onyxia"
       #oidc.extra-query-params: "kc_idp_hint=google&foo=bar"

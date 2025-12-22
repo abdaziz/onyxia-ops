@@ -5,7 +5,7 @@ metadata:
   name: onyxia-keycloak
   namespace: argocd
 spec:
-  project: default
+  project: onyxia
   source:
     repoURL: https://github.com/abdaziz/onyxia-ops.git
     targetRevision: HEAD

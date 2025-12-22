@@ -30,7 +30,7 @@ onyxia:
   api:
     serviceAccount:
       create: true
-      clusterAdmin: true
+      clusterAdmin: false
     # The full list of configuration option for the api component is available here:
     # https://github.com/InseeFrLab/onyxia-api?tab=readme-ov-file#configuration
     env:
@@ -51,7 +51,7 @@ onyxia:
         description: "Region hosted on my-cluster",
         services: {
           type: "KUBERNETES",
-          singleNamespace: false,
+          singleNamespace: true,
           authenticationMode: "serviceAccount",
           expose: {
             domain: "lab.databrin.com"

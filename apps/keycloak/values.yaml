@@ -17,7 +17,7 @@ keycloak:
   postgresql:
     image:
       repository: bitnamilegacy/postgresql
-      tag: 18.1.15
+      tag: latest
   production: true
   tls: 
     enabled: false 

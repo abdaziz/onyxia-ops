@@ -10,8 +10,8 @@ minio:
       memory: "4Gi"  
   ingress:
     enabled: true
-    #annotations:
-    #  kubernetes.io/ingress.class: nginx
+    annotations:
+      kubernetes.io/ingress.class: nginx
     path: /
     hosts:
       - minio.lab.databrin.com

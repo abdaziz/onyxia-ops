@@ -41,7 +41,13 @@ onyxia:
       #oidc.audience: "onyxia"
       #oidc.extra-query-params: "kc_idp_hint=google&foo=bar"
       #springdoc.swagger-ui.oauth.clientId: onyxia
-    
+    extraVolumeMounts:
+      - mountPath: "/usr/local/share/ca-certificates"
+        name: ca-bundle
+    extraVolumes:
+      - name: ca-bundle
+        secret:
+          secretName: ca-bundle 
     # The region configuration is available here: 
     # https://github.com/InseeFrLab/onyxia-api/blob/main/docs/region-configuration.md
     regions: [

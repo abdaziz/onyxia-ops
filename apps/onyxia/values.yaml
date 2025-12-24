@@ -71,7 +71,7 @@ onyxia:
         # https://github.com/InseeFrLab/onyxia-api/blob/main/docs/region-configuration.md#s3
         data: {
           S3 : {
-            URL: "https://minio-console.lab.databrin.com",
+            URL: "https://minio.lab.databrin.com",
             pathStyleAccess: true,
             sts: {
                 durationSeconds: 86400,

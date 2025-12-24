@@ -38,7 +38,7 @@ minio:
     clientId: "minio"
     claimName: "policy"
     scopes: "openid,profile,email"
-    redirectUri: "https://minio-console.lab.databrin.com"
+    redirectUri: "https://minio-console.lab.databrin.com/oauth_callback"
     claimPrefix: ""
     comment: ""
     clientSecret: "5WIlmSIm1b4pd48A3sNywVXegOSrpq6Y"

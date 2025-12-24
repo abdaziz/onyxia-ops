@@ -36,7 +36,7 @@ minio:
     enabled: true
     configUrl: "https://auth.lab.databrin.com/auth/realms/datalab/.well-known/openid-configuration"
     clientId: "minio"
-    claimName: "policy"
+    claimName: "preferred_username"
     scopes: "openid,profile,email"
     redirectUri: "https://minio-console.lab.databrin.com/oauth_callback"
     claimPrefix: ""

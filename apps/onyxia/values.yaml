@@ -37,7 +37,7 @@ onyxia:
       #security.cors.allowed_origins: "*"
       authentication.mode: "openidconnect"
       oidc.issuer-uri: "https://auth.lab.databrin.com/auth/realms/datalab"
-      oidc.clientID: "onyxia-minio"
+      oidc.clientID: "onyxia"
       #oidc.audience: "onyxia"
       #oidc.extra-query-params: "kc_idp_hint=google&foo=bar"
       #springdoc.swagger-ui.oauth.clientId: onyxia
@@ -75,6 +75,7 @@ onyxia:
             pathStyleAccess: true,
             sts: {
                 durationSeconds: 86400,
+                roleARN: "arn:minio:iam:::role/onyxia",
                 oidcConfiguration: {
                   clientID: "onyxia-minio"
                 }

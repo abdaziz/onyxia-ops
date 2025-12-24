@@ -57,7 +57,7 @@ onyxia:
         description: "Region hosted on my-cluster",
         services: {
           type: "KUBERNETES",
-          singleNamespace: false,
+          singleNamespace: true,
           authenticationMode: "serviceAccount",
           expose: {
             domain: "lab.databrin.com"
@@ -75,7 +75,6 @@ onyxia:
             pathStyleAccess: true,
             sts: {
                 durationSeconds: 86400,
-                roleARN: "arn:minio:iam:::role/onyxia",
                 oidcConfiguration: {
                   clientID: "onyxia-minio"
                 }

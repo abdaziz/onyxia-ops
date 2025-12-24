@@ -73,6 +73,7 @@ onyxia:
           S3 : {
             URL: "https://minio.lab.databrin.com",
             pathStyleAccess: true,
+            forcePathStyle: true,
             sts: {
                 durationSeconds: 86400,
                 oidcConfiguration: {

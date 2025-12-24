@@ -47,7 +47,7 @@ onyxia:
     extraVolumes:
       - name: ca-bundle
         secret:
-          secretName: ca-bundle
+          secretName: ca-bundle 
     # The region configuration is available here: 
     # https://github.com/InseeFrLab/onyxia-api/blob/main/docs/region-configuration.md
     regions: [
@@ -57,7 +57,7 @@ onyxia:
         description: "Region hosted on my-cluster",
         services: {
           type: "KUBERNETES",
-          singleNamespace: false,
+          singleNamespace: true,
           authenticationMode: "serviceAccount",
           expose: {
             domain: "lab.databrin.com"
@@ -66,25 +66,6 @@ onyxia:
           #usernamePrefix:"oidc-",
           #groupNamespacePrefix:"project-",
           #groupPrefix:"oidc-",
-        },
-        # Documentation for the S3 configuration is available here:
-        # https://github.com/InseeFrLab/onyxia-api/blob/main/docs/region-configuration.md#s3
-        data: {
-          S3 : {
-            URL: "https://minio.lab.databrin.com",
-            pathStyleAccess: true,
-            sts: {
-                durationSeconds: 86400,
-                oidcConfiguration: {
-                  clientID: "onyxia-minio"
-                }
-            },
-            workingDirectory: {
-                bucketMode: "multi",
-                bucketNamePrefix: "user-",
-                bucketNamePrefixGroup: "project-"
-            }
-          }
         }
       }
     ]

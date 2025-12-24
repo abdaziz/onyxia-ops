@@ -41,6 +41,7 @@ onyxia:
       #oidc.audience: "onyxia"
       #oidc.extra-query-params: "kc_idp_hint=google&foo=bar"
       #springdoc.swagger-ui.oauth.clientId: onyxia
+      oidc.username-claim: "preferred_username"
     extraVolumeMounts:
       - mountPath: "/usr/local/share/ca-certificates"
         name: ca-bundle

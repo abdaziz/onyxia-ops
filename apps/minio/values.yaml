@@ -32,8 +32,6 @@ minio:
     size: 10Gi
   environment:
     MINIO_BROWSER_REDIRECT_URL: "https://minio-console.lab.databrin.com"
-    #MINIO_IDENTITY_OPENID_CONFIG_URL: "https://auth.lab.databrin.com/realms/datalab/.well-known/openid-configuration"
-    #MINIO_IDENTITY_OPENID_CLIENT_ID: "minio"
   oidc:
     enabled: true
     configUrl: "https://auth.lab.databrin.com/auth/realms/datalab/.well-known/openid-configuration"

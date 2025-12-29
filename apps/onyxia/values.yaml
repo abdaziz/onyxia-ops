@@ -13,8 +13,8 @@ onyxia:
       #  {
       #    severity: "success",
       #    message: {
-      #      en: "A **big** announcement! [Check it out](https://example.com)!",
-      #      fr: "Une annonce **importante**! [Regardez](https://example.com)!"
+      #      en: "A **big** announcement! [Check it out](https://databrin)!",
+      #      fr: "Une annonce **importante**! [Regardez](https://databrin)!"
       #    }
       #  }
 

@@ -60,3 +60,12 @@ minio:
             - 'arn:aws:s3:::user-${jwt:preferred_username}/*'
           actions:
             - "s3:*"
+  additionalVolumes:
+    - name: keycloak-certs
+      secret:
+        secretName: ca-bundle
+  additionalVolumeMounts:
+    - name: keycloak-certs
+      mountPath: /etc/ssl/certs/keycloak-ca.crt
+      subPath: keycloak-ca.crt
+

@@ -60,6 +60,7 @@ minio:
             - 'arn:aws:s3:::user-${jwt:preferred_username}/*'
           actions:
             - "s3:*"
+tenant:
   additionalVolumes:
     - name: keycloak-certs
       secret:
